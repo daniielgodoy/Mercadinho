@@ -141,7 +141,9 @@
             this.textBoxQUANTIDADE.Name = "textBoxQUANTIDADE";
             this.textBoxQUANTIDADE.Size = new System.Drawing.Size(204, 32);
             this.textBoxQUANTIDADE.TabIndex = 3;
+            this.textBoxQUANTIDADE.Text = "1";
             this.textBoxQUANTIDADE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxQUANTIDADE.TextChanged += new System.EventHandler(this.textBoxQUANTIDADE_TextChanged);
             // 
             // label10
             // 
@@ -285,6 +287,7 @@
             this.buttonFINALIZAR.TabIndex = 2;
             this.buttonFINALIZAR.Text = "FINALIZAR COMPRA";
             this.buttonFINALIZAR.UseVisualStyleBackColor = false;
+            this.buttonFINALIZAR.Click += new System.EventHandler(this.buttonFINALIZAR_Click);
             // 
             // panel2
             // 
