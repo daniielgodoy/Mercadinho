@@ -1,0 +1,11 @@
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\bin\Debug\Mercadinho.exe.config
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\bin\Debug\Mercadinho.exe
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\bin\Debug\Mercadinho.pdb
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.csproj.AssemblyReference.cache
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.csproj.SuggestedBindingRedirects.cache
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.Form1.resources
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.Properties.Resources.resources
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.csproj.GenerateResource.cache
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.csproj.CoreCompileInputs.cache
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.exe
+C:\Users\user_acronus\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.pdb
