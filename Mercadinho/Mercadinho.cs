@@ -326,7 +326,7 @@ namespace Mercadinho
             MessageBox.Show("Compra finalizada com sucesso!");
             LIMPAR();
             id_vendas = null;
-            if (DialogResult.Yes == MessageBox.Show("Deseja iniciar uma nova venda? Caso escolha NÃO o aplicativo será encerrado!", "Nova Venda!", MessageBoxButtons.YesNo))
+            if (DialogResult.Yes == MessageBox.Show("Deseja iniciar uma nova venda? Caso escolha NÃO o aplicativo irá retornar a tela de login!", "Nova Venda!", MessageBoxButtons.YesNo))
             {
                 DATAGRID_CARRINHO();
                 DATAGRID_ITENS();
@@ -334,7 +334,10 @@ namespace Mercadinho
             }
             else
             {
-                this.Close();
+                this.Hide();
+                Form TelaLogin = new TelaLogin();
+                TelaLogin.FormClosed += (s, args) => this.Close();
+                TelaLogin.Show();
             }
 
         }

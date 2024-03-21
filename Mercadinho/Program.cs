@@ -16,7 +16,7 @@ namespace Mercadinho
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mercadinho());
+            Application.Run(new TelaLogin());
         }
     }
 }
