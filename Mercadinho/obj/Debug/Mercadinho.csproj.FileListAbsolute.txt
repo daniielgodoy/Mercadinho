@@ -95,3 +95,7 @@ C:\Users\Daniel\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.exe
 C:\Users\Daniel\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.pdb
 C:\Users\Daniel\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.TelaLogin.resources
 C:\Users\Daniel\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.TelaGerente.resources
+C:\Users\daniel.sgodoy\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.CadastroFunc.resources
+C:\Users\daniel.sgodoy\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.TelaGerente.resources
+C:\Users\daniel.sgodoy\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.TelaLogin.resources
+C:\Users\daniel.sgodoy\Source\Repos\Mercadinho\Mercadinho\obj\Debug\Mercadinho.CadastroProdutos.resources

@@ -32,7 +32,7 @@ namespace Mercadinho
             {
 
                 conexao.Open();
-                comando.CommandText = "SELECT nome, senha FROM tbl_funcionarios WHERE nome = '"+textBoxLOGIN.Text+"' AND senha = '"+textBoxSENHA.Text+"';";
+                comando.CommandText = "SELECT cpf, senha FROM tbl_funcionarios WHERE cpf = '"+textBoxLOGIN.Text+"' AND senha = '"+textBoxSENHA.Text+"';";
                 MySqlDataReader resultado = comando.ExecuteReader();
 
                 if (resultado.Read())
@@ -42,7 +42,7 @@ namespace Mercadinho
                     {
 
                         conexao.Open();
-                        comando.CommandText = "SELECT cargo FROM tbl_funcionarios WHERE nome = '" + textBoxLOGIN.Text + "' AND senha = '" + textBoxSENHA.Text + "' AND cargo = 'gerente';";
+                        comando.CommandText = "SELECT cargo FROM tbl_funcionarios WHERE cpf = '" + textBoxLOGIN.Text + "' AND senha = '" + textBoxSENHA.Text + "' AND cargo = 'Gerente';";
                         MySqlDataReader resultado2 = comando.ExecuteReader();
 
                         if (resultado2.Read())
@@ -54,10 +54,32 @@ namespace Mercadinho
                         }
                         else
                         {
-                            this.Hide();
-                            Form TelaMercadinho = new Mercadinho();
-                            TelaMercadinho.FormClosed += (s, args) => this.Close();
-                            TelaMercadinho.Show();
+                            conexao.Close();
+                            try
+                            {
+
+                                conexao.Open();
+                                comando.CommandText = "SELECT id FROM tbl_funcionarios WHERE cpf = '" + textBoxLOGIN.Text + "' AND senha = '" + textBoxSENHA.Text + "' AND cargo = 'Funcionário';";
+                                MySqlDataReader resultado3 = comando.ExecuteReader();
+
+                                if (resultado3.Read())
+                                {
+                                    variavel.id_func = resultado3.GetInt32(0).ToString();
+                                    this.Hide();
+                                    Form TelaMercadinho = new Mercadinho();
+                                    TelaMercadinho.FormClosed += (s, args) => this.Close();
+                                    TelaMercadinho.Show();
+                                }
+
+                            }
+                            catch (Exception erro_mysql)
+                            {
+                                MessageBox.Show(erro_mysql.Message);
+                            }
+                            finally
+                            {
+                                conexao.Close();
+                            }
                         }
 
 

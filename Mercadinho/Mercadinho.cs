@@ -46,7 +46,7 @@ namespace Mercadinho
 
                 if (resultado.Read())
                 {
-                    valor_total = resultado.GetInt32(0).ToString();
+                    valor_total = resultado.GetDouble(0).ToString().Replace(",", ".");
                 }
 
             }
@@ -71,7 +71,7 @@ namespace Mercadinho
 
                 if (resultado.Read())
                 {
-                    valor_uni = resultado.GetInt32(0).ToString();
+                    valor_uni = resultado.GetDouble(0).ToString();
                 }
 
             }
@@ -114,7 +114,7 @@ namespace Mercadinho
             {
 
                 conexao.Open();
-                comando.CommandText = "INSERT INTO tbl_vendas(data_compra, fk_clientes, fk_funcionarios) VALUES (CURDATE(), '1','1');";
+                comando.CommandText = "INSERT INTO tbl_vendas(data_compra, fk_clientes, fk_funcionarios) VALUES (CURDATE(), '1','"+variavel.id_func+"');";
                 comando.ExecuteNonQuery();
 
             }
@@ -265,7 +265,7 @@ namespace Mercadinho
 
                     if (resultado.Read())
                     {
-                        valor_venda = resultado.GetInt32(0).ToString();
+                        valor_venda = resultado.GetDouble(0).ToString().Replace(",", ".");
                     }
                 }
                 catch (Exception erro_mysql)

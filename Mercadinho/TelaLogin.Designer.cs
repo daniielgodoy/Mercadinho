@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxLOGIN = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxSENHA = new System.Windows.Forms.TextBox();
-            this.buttonADICIONAR = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonADICIONAR = new System.Windows.Forms.Button();
+            this.textBoxSENHA = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxLOGIN = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,47 +53,18 @@
             this.panel1.Size = new System.Drawing.Size(256, 138);
             this.panel1.TabIndex = 0;
             // 
-            // label6
+            // button1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(320, 22);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Login                                                     ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxLOGIN
-            // 
-            this.textBoxLOGIN.Location = new System.Drawing.Point(3, 25);
-            this.textBoxLOGIN.Name = "textBoxLOGIN";
-            this.textBoxLOGIN.Size = new System.Drawing.Size(248, 20);
-            this.textBoxLOGIN.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(0, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 22);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Senha                                                     ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxSENHA
-            // 
-            this.textBoxSENHA.Location = new System.Drawing.Point(3, 73);
-            this.textBoxSENHA.Name = "textBoxSENHA";
-            this.textBoxSENHA.Size = new System.Drawing.Size(248, 20);
-            this.textBoxSENHA.TabIndex = 6;
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(142, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 28);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "LIMPAR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // buttonADICIONAR
             // 
@@ -109,18 +80,48 @@
             this.buttonADICIONAR.UseVisualStyleBackColor = false;
             this.buttonADICIONAR.Click += new System.EventHandler(this.buttonADICIONAR_Click);
             // 
-            // button1
+            // textBoxSENHA
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(142, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 28);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "LIMPAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textBoxSENHA.Location = new System.Drawing.Point(3, 73);
+            this.textBoxSENHA.Name = "textBoxSENHA";
+            this.textBoxSENHA.PasswordChar = '*';
+            this.textBoxSENHA.Size = new System.Drawing.Size(248, 20);
+            this.textBoxSENHA.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(0, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(328, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Senha                                                     ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxLOGIN
+            // 
+            this.textBoxLOGIN.Location = new System.Drawing.Point(3, 25);
+            this.textBoxLOGIN.Name = "textBoxLOGIN";
+            this.textBoxLOGIN.Size = new System.Drawing.Size(248, 20);
+            this.textBoxLOGIN.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(365, 22);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "CPF                                                                ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TelaLogin
             // 

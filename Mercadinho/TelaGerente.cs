@@ -37,5 +37,13 @@ namespace Mercadinho
             TelaFunc.FormClosed += (s, args) => this.Close();
             TelaFunc.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form TelaLogin = new TelaLogin();
+            TelaLogin.FormClosed += (s, args) => this.Close();
+            TelaLogin.Show();
+        }
     }
 }
