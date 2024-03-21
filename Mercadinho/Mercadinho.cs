@@ -157,7 +157,7 @@ namespace Mercadinho
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT descricao, preco, quantidade FROM tbl_produtos INNER JOIN tbl_itens_vendas ON (tbl_itens_vendas.fk_produtos = tbl_produtos.id) WHERE tbl_itens_vendas.fk_vendas = '"+id_vendas+"'; ;";
+                comando.CommandText = "SELECT descricao, preco, quantidade, valor_venda FROM tbl_produtos INNER JOIN tbl_itens_vendas ON (tbl_itens_vendas.fk_produtos = tbl_produtos.id) WHERE tbl_itens_vendas.fk_vendas = '"+id_vendas+"'; ;";
                 MySqlDataAdapter adaptadorMerc = new MySqlDataAdapter(comando);
                 DataTable tabelaMerc = new DataTable();
                 adaptadorMerc.Fill(tabelaMerc);
@@ -210,18 +210,15 @@ namespace Mercadinho
 
         private void buttonADICIONAR_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxCODIGO.Text != "" && textBoxQUANTIDADE.Text != "")
             {
-                if (textBoxCODIGO.Text != "" && textBoxQUANTIDADE.Text != "")
-                {
+                try
+            {
+                
                     conexao.Open();
                     comando.CommandText = "INSERT INTO tbl_itens_vendas(fk_produtos, fk_vendas, quantidade) VALUES('" + textBoxCODIGO.Text + "', '" + id_vendas + "', '" + textBoxQUANTIDADE.Text + "');";
                     comando.ExecuteNonQuery();
-                }
-                else
-                {
-                    MessageBox.Show("Código ou Quantidade em branco! Por favor preencha.");
-                }
+                
             }
             catch (Exception erro_mysql)
             {
@@ -261,7 +258,7 @@ namespace Mercadinho
                 if (resultado.Read())
                 {
                     valor_venda = resultado.GetInt32(0).ToString();
-                }
+                    }
             }
             catch (Exception erro_mysql)
             {
@@ -292,6 +289,11 @@ namespace Mercadinho
             labelSUBTOTAL.Text = $"R$ " + valor_total + "";
             labelTOTALITEM.Text = "R$00.00";
             labelVALORUNI.Text = "R$00.00";
+            }
+            else
+            {
+                MessageBox.Show("Código ou Quantidade em branco! Por favor preencha.");
+            }
 
 
         }
@@ -315,9 +317,18 @@ namespace Mercadinho
             }
             MessageBox.Show("Compra finalizada com sucesso!");
             LIMPAR();
-            INICIARCOMPRA();
-            DATAGRID_CARRINHO();
-            DATAGRID_ITENS();
+            id_vendas = null;
+            if (DialogResult.Yes == MessageBox.Show("Deseja iniciar uma nova venda? Caso escolha NÃO o aplicativo será encerrado!", "Nova Venda!", MessageBoxButtons.YesNo))
+            {
+                DATAGRID_CARRINHO();
+                DATAGRID_ITENS();
+                INICIARCOMPRA();
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
 
         private void textBoxQUANTIDADE_TextChanged(object sender, EventArgs e)
