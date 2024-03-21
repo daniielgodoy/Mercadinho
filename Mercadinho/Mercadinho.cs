@@ -25,6 +25,7 @@ namespace Mercadinho
         MySqlConnection conexao;
         MySqlCommand comando;
         string id_produtos;
+        int produtos;
         public Mercadinho()
         {
             InitializeComponent();
@@ -33,13 +34,14 @@ namespace Mercadinho
             comando = conexao.CreateCommand();
             INICIARCOMPRA();
         }
-        
-        private void VALORTOTAL() { 
+
+        private void VALORTOTAL()
+        {
             try
             {
 
                 conexao.Open();
-                comando.CommandText = "SELECT SUM(valor_venda) FROM tbl_itens_vendas WHERE fk_vendas = '"+id_vendas+"';";
+                comando.CommandText = "SELECT SUM(valor_venda) FROM tbl_itens_vendas WHERE fk_vendas = '" + id_vendas + "';";
                 MySqlDataReader resultado = comando.ExecuteReader();
 
                 if (resultado.Read())
@@ -62,7 +64,7 @@ namespace Mercadinho
         {
             try
             {
-                
+
                 conexao.Open();
                 comando.CommandText = "SELECT preco FROM tbl_produtos WHERE id = '" + textBoxCODIGO.Text + "';";
                 MySqlDataReader resultado = comando.ExecuteReader();
@@ -157,7 +159,7 @@ namespace Mercadinho
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT descricao, preco, quantidade, valor_venda FROM tbl_produtos INNER JOIN tbl_itens_vendas ON (tbl_itens_vendas.fk_produtos = tbl_produtos.id) WHERE tbl_itens_vendas.fk_vendas = '"+id_vendas+"'; ;";
+                comando.CommandText = "SELECT descricao, preco, quantidade, valor_venda FROM tbl_produtos INNER JOIN tbl_itens_vendas ON (tbl_itens_vendas.fk_produtos = tbl_produtos.id) WHERE tbl_itens_vendas.fk_vendas = '" + id_vendas + "'; ;";
                 MySqlDataAdapter adaptadorMerc = new MySqlDataAdapter(comando);
                 DataTable tabelaMerc = new DataTable();
                 adaptadorMerc.Fill(tabelaMerc);
@@ -196,8 +198,11 @@ namespace Mercadinho
         private void textBoxCODIGO_TextChanged(object sender, EventArgs e)
         {
             PRODUTOS();
-            int produtos = int.Parse(id_produtos);
-            if (textBoxCODIGO.Text.Length > 0 && textBoxCODIGO.Text.Length < produtos && textBoxQUANTIDADE.Text != "")
+            if (valor_uni == null)
+            {
+                valor_uni = "0";
+            }
+            if (textBoxCODIGO.Text.Length > 0 && textBoxQUANTIDADE.Text != "")
             {
                 DATAGRID_ITENS();
                 VALORUNI();
@@ -210,89 +215,92 @@ namespace Mercadinho
 
         private void buttonADICIONAR_Click(object sender, EventArgs e)
         {
-            if (textBoxCODIGO.Text != "" && textBoxQUANTIDADE.Text != "")
+            PRODUTOS();
+            int produtos = int.Parse(id_produtos);
+            int codigo = Convert.ToInt32(textBoxCODIGO.Text);
+            if (textBoxCODIGO.Text != "" && textBoxQUANTIDADE.Text != "" && codigo <= produtos)
             {
                 try
-            {
-                
+                {
+
                     conexao.Open();
                     comando.CommandText = "INSERT INTO tbl_itens_vendas(fk_produtos, fk_vendas, quantidade) VALUES('" + textBoxCODIGO.Text + "', '" + id_vendas + "', '" + textBoxQUANTIDADE.Text + "');";
                     comando.ExecuteNonQuery();
-                
-            }
-            catch (Exception erro_mysql)
-            {
-                MessageBox.Show(erro_mysql.Message);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "SELECT MAX(id) FROM tbl_itens_vendas;";
 
-                MySqlDataReader resultado = comando.ExecuteReader();
-
-                if (resultado.Read())
-                {
-                    id_itens_vendas = resultado.GetInt32(0).ToString();
                 }
-            }
-            catch (Exception erro_mysql)
-            {
-                MessageBox.Show(erro_mysql.Message);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "SELECT SUM((preco * "+textBoxQUANTIDADE.Text+")) FROM tbl_produtos WHERE tbl_produtos.id = '" + textBoxCODIGO.Text + "'";
-
-                MySqlDataReader resultado = comando.ExecuteReader();
-
-                if (resultado.Read())
+                catch (Exception erro_mysql)
                 {
-                    valor_venda = resultado.GetInt32(0).ToString();
-                    }
-            }
-            catch (Exception erro_mysql)
-            {
-                MessageBox.Show(erro_mysql.Message);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "UPDATE tbl_itens_vendas SET valor_venda = " + valor_venda + " WHERE id = " + id_itens_vendas + "";
-                comando.ExecuteNonQuery();
-            }
+                    MessageBox.Show(erro_mysql.Message);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                try
+                {
+                    conexao.Open();
+                    comando.CommandText = "SELECT MAX(id) FROM tbl_itens_vendas;";
 
-            catch (Exception erro_mysql)
-            {
-                MessageBox.Show(erro_mysql.Message);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-            LIMPAR();
-            DATAGRID_CARRINHO();
-            VALORTOTAL();
-            labelSUBTOTAL.Text = $"R$ " + valor_total + "";
-            labelTOTALITEM.Text = "R$00.00";
-            labelVALORUNI.Text = "R$00.00";
+                    MySqlDataReader resultado = comando.ExecuteReader();
+
+                    if (resultado.Read())
+                    {
+                        id_itens_vendas = resultado.GetInt32(0).ToString();
+                    }
+                }
+                catch (Exception erro_mysql)
+                {
+                    MessageBox.Show(erro_mysql.Message);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                try
+                {
+                    conexao.Open();
+                    comando.CommandText = "SELECT SUM((preco * " + textBoxQUANTIDADE.Text + ")) FROM tbl_produtos WHERE tbl_produtos.id = '" + textBoxCODIGO.Text + "'";
+
+                    MySqlDataReader resultado = comando.ExecuteReader();
+
+                    if (resultado.Read())
+                    {
+                        valor_venda = resultado.GetInt32(0).ToString();
+                    }
+                }
+                catch (Exception erro_mysql)
+                {
+                    MessageBox.Show(erro_mysql.Message);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                try
+                {
+                    conexao.Open();
+                    comando.CommandText = "UPDATE tbl_itens_vendas SET valor_venda = " + valor_venda + " WHERE id = " + id_itens_vendas + "";
+                    comando.ExecuteNonQuery();
+                }
+
+                catch (Exception erro_mysql)
+                {
+                    MessageBox.Show(erro_mysql.Message);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                LIMPAR();
+                DATAGRID_CARRINHO();
+                VALORTOTAL();
+                labelSUBTOTAL.Text = $"R$ " + valor_total + "";
+                labelTOTALITEM.Text = "R$00.00";
+                labelVALORUNI.Text = "R$00.00";
             }
             else
             {
-                MessageBox.Show("Código ou Quantidade em branco! Por favor preencha.");
+                MessageBox.Show("Código ou Quantidade em branco e/ou Código Inexistente! Por favor preencha corretamente.");
             }
 
 
@@ -328,14 +336,12 @@ namespace Mercadinho
             {
                 this.Close();
             }
-            
+
         }
 
         private void textBoxQUANTIDADE_TextChanged(object sender, EventArgs e)
         {
-            PRODUTOS();
-            int produtos = int.Parse(id_produtos);
-            if (textBoxCODIGO.Text.Length > 0 && textBoxCODIGO.Text.Length < produtos && textBoxQUANTIDADE.Text != "")
+            if (textBoxCODIGO.Text.Length > 0 && textBoxQUANTIDADE.Text != "")
             {
                 DATAGRID_ITENS();
                 VALORUNI();
