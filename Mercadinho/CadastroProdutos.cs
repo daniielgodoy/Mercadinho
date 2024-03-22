@@ -23,6 +23,12 @@ namespace Mercadinho
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
         }
+        private void LIMPAR()
+        {
+            textBoxDESCRICAO.Clear();
+            textBoxVALOR.Text = "0";
+            textBoxCENTAVO.Text = "00";
+        }
 
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
@@ -43,7 +49,9 @@ namespace Mercadinho
                 finally
                 {
                     conexao.Close();
+                    LIMPAR();
                 }
+
             }
             else
             {

@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\danii\\source\\repos\\Mercadinho\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\cadastrofunc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\cadastrofunc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\mercadinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\mercadinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\telagerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\telagerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\Mercadinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:Mercadinho\\Mercadinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\cadastroprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\cadastroprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\mercadinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\mercadinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:Mercadinho\\TelaLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:Mercadinho\\CadastroFunc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaGerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:Mercadinho\\TelaGerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\cadastrofunc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\cadastrofunc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|c:\\users\\danii\\source\\repos\\mercadinho\\mercadinho\\cadastroprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85D2CDEF-8671-4F25-8BC5-490A2FE1F3B1}|Mercadinho\\Mercadinho.csproj|solutionrelative:mercadinho\\cadastroprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,24 +57,8 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CadastroFunc.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs",
-              "RelativeDocumentMoniker": "Mercadinho\\CadastroFunc.cs",
-              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs [Design]",
-              "RelativeToolTip": "Mercadinho\\CadastroFunc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T02:53:12.65Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CadastroProdutos.cs [Design]",
               "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroProdutos.cs",
               "RelativeDocumentMoniker": "Mercadinho\\CadastroProdutos.cs",
@@ -74,19 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TelaGerente.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaGerente.cs",
-              "RelativeDocumentMoniker": "Mercadinho\\TelaGerente.cs",
-              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaGerente.cs [Design]",
-              "RelativeToolTip": "Mercadinho\\TelaGerente.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T02:52:22.635Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TelaLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaLogin.cs",
               "RelativeDocumentMoniker": "Mercadinho\\TelaLogin.cs",
@@ -99,6 +83,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "CadastroFunc.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs",
+              "RelativeDocumentMoniker": "Mercadinho\\CadastroFunc.cs",
+              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs [Design]",
+              "RelativeToolTip": "Mercadinho\\CadastroFunc.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T02:53:12.65Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Mercadinho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\Mercadinho.cs",
               "RelativeDocumentMoniker": "Mercadinho\\Mercadinho.cs",
@@ -107,6 +103,57 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-22T02:50:02.867Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mercadinho.cs",
+              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\Mercadinho.cs",
+              "RelativeDocumentMoniker": "Mercadinho\\Mercadinho.cs",
+              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\Mercadinho.cs",
+              "RelativeToolTip": "Mercadinho\\Mercadinho.cs",
+              "ViewState": "AQIAAFEBAAAAAAAAAAAAAF8BAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:27:59.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CadastroFunc.cs",
+              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs",
+              "RelativeDocumentMoniker": "Mercadinho\\CadastroFunc.cs",
+              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroFunc.cs",
+              "RelativeToolTip": "Mercadinho\\CadastroFunc.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwDoAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:17:35.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TelaGerente.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaGerente.cs",
+              "RelativeDocumentMoniker": "Mercadinho\\TelaGerente.cs",
+              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\TelaGerente.cs [Design]",
+              "RelativeToolTip": "Mercadinho\\TelaGerente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T02:52:22.635Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CadastroProdutos.cs",
+              "DocumentMoniker": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroProdutos.cs",
+              "RelativeDocumentMoniker": "Mercadinho\\CadastroProdutos.cs",
+              "ToolTip": "C:\\Users\\danii\\source\\repos\\Mercadinho\\Mercadinho\\CadastroProdutos.cs",
+              "RelativeToolTip": "Mercadinho\\CadastroProdutos.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAwwDMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:15:01.721Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxCENTAVO = new System.Windows.Forms.TextBox();
+            this.labelPONTO = new System.Windows.Forms.Label();
             this.buttonCADASTRAR = new System.Windows.Forms.Button();
             this.textBoxVALOR = new System.Windows.Forms.TextBox();
             this.textBoxDESCRICAO = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelPONTO = new System.Windows.Forms.Label();
-            this.textBoxCENTAVO = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,38 @@
             this.panel1.Size = new System.Drawing.Size(234, 128);
             this.panel1.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(27, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBoxCENTAVO
+            // 
+            this.textBoxCENTAVO.Location = new System.Drawing.Point(134, 34);
+            this.textBoxCENTAVO.Name = "textBoxCENTAVO";
+            this.textBoxCENTAVO.Size = new System.Drawing.Size(44, 20);
+            this.textBoxCENTAVO.TabIndex = 10;
+            this.textBoxCENTAVO.Text = "00";
+            this.textBoxCENTAVO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelPONTO
+            // 
+            this.labelPONTO.AutoSize = true;
+            this.labelPONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPONTO.Location = new System.Drawing.Point(122, 35);
+            this.labelPONTO.Name = "labelPONTO";
+            this.labelPONTO.Size = new System.Drawing.Size(13, 18);
+            this.labelPONTO.TabIndex = 9;
+            this.labelPONTO.Text = ".";
+            // 
             // buttonCADASTRAR
             // 
             this.buttonCADASTRAR.BackColor = System.Drawing.Color.MidnightBlue;
@@ -76,6 +108,8 @@
             this.textBoxVALOR.Name = "textBoxVALOR";
             this.textBoxVALOR.Size = new System.Drawing.Size(44, 20);
             this.textBoxVALOR.TabIndex = 5;
+            this.textBoxVALOR.Text = "0";
+            this.textBoxVALOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxDESCRICAO
             // 
@@ -101,36 +135,6 @@
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Descrição:";
-            // 
-            // labelPONTO
-            // 
-            this.labelPONTO.AutoSize = true;
-            this.labelPONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPONTO.Location = new System.Drawing.Point(122, 35);
-            this.labelPONTO.Name = "labelPONTO";
-            this.labelPONTO.Size = new System.Drawing.Size(13, 18);
-            this.labelPONTO.TabIndex = 9;
-            this.labelPONTO.Text = ".";
-            // 
-            // textBoxCENTAVO
-            // 
-            this.textBoxCENTAVO.Location = new System.Drawing.Point(134, 34);
-            this.textBoxCENTAVO.Name = "textBoxCENTAVO";
-            this.textBoxCENTAVO.Size = new System.Drawing.Size(44, 20);
-            this.textBoxCENTAVO.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(27, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CadastroProdutos
             // 

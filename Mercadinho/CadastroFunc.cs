@@ -23,10 +23,17 @@ namespace Mercadinho
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
         }
+        private void LIMPAR()
+        {
+            textBoxNOME.Clear();
+            textBoxCPF.Clear();
+            textBoxSENHA.Clear();
+            comboBoxCARGO.Text = "Funcionário";
+        }
 
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
-            if (textBoxNOME.Text != "" && textBoxCPF.Text != "" && textBoxSENHA.Text != "" && comboBoxCARGO.Text != "")
+            if (textBoxNOME.Text != "" && textBoxCPF.Text != "" && textBoxSENHA.Text != "" && comboBoxCARGO.Text != "" && textBoxCPF.Text.Length != 11)
             {
                 try
                 {
@@ -44,11 +51,12 @@ namespace Mercadinho
                 finally
                 {
                     conexao.Close();
+                    LIMPAR();
                 }
             }
             else
             {
-                MessageBox.Show("Preencha todos campos.");
+                MessageBox.Show("Preencha todos campos corretamente. (Verifique o CPF).");
             }
         }
 
@@ -58,6 +66,11 @@ namespace Mercadinho
             Form TelaGerente = new TelaGerente();
             TelaGerente.FormClosed += (s, args) => this.Close();
             TelaGerente.Show();
+        }
+
+        private void textBoxCPF_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

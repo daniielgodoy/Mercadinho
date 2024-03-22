@@ -152,7 +152,8 @@ namespace Mercadinho
         private void LIMPAR()
         {
             textBoxCODIGO.Clear();
-            textBoxQUANTIDADE.Text = "1";
+            numericUpDown1.Text = "1";
+            textBoxDESC.Clear();
         }
         private void DATAGRID_CARRINHO()
         {
@@ -194,6 +195,26 @@ namespace Mercadinho
                 conexao.Close();
             }
         }
+        private void DATAGRID_PESQUISA()
+        {
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT * FROM tbl_produtos WHERE descricao = '" + textBoxDESC.Text + "';";
+                MySqlDataAdapter adaptadorMerc = new MySqlDataAdapter(comando);
+                DataTable tabelaMerc = new DataTable();
+                adaptadorMerc.Fill(tabelaMerc);
+                dataGridViewPESQUISA.DataSource = tabelaMerc;
+            }
+            catch (Exception erro_mysql)
+            {
+                MessageBox.Show(erro_mysql.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
 
         private void textBoxCODIGO_TextChanged(object sender, EventArgs e)
         {
@@ -202,13 +223,13 @@ namespace Mercadinho
             {
                 valor_uni = "0";
             }
-            if (textBoxCODIGO.Text.Length > 0 && textBoxQUANTIDADE.Text != "")
+            if (textBoxCODIGO.Text.Length > 0 && numericUpDown1.Text != "")
             {
                 DATAGRID_ITENS();
                 VALORUNI();
                 labelVALORUNI.Text = $"R$ " + valor_uni + "";
                 double valorUnitario = double.Parse(valor_uni);
-                int quantidade = int.Parse(textBoxQUANTIDADE.Text);
+                int quantidade = int.Parse(numericUpDown1.Text);
                 labelTOTALITEM.Text = $"R$ " + valorUnitario * quantidade + "";
             }
         }
@@ -218,13 +239,13 @@ namespace Mercadinho
             PRODUTOS();
             int produtos = int.Parse(id_produtos);
             int codigo = Convert.ToInt32(textBoxCODIGO.Text);
-            if (textBoxCODIGO.Text != "" && textBoxQUANTIDADE.Text != "" && codigo <= produtos)
+            if (textBoxCODIGO.Text != "" && numericUpDown1.Text != "" && codigo <= produtos)
             {
                 try
                 {
 
                     conexao.Open();
-                    comando.CommandText = "INSERT INTO tbl_itens_vendas(fk_produtos, fk_vendas, quantidade) VALUES('" + textBoxCODIGO.Text + "', '" + id_vendas + "', '" + textBoxQUANTIDADE.Text + "');";
+                    comando.CommandText = "INSERT INTO tbl_itens_vendas(fk_produtos, fk_vendas, quantidade) VALUES('" + textBoxCODIGO.Text + "', '" + id_vendas + "', '" + numericUpDown1.Text + "');";
                     comando.ExecuteNonQuery();
 
                 }
@@ -259,7 +280,7 @@ namespace Mercadinho
                 try
                 {
                     conexao.Open();
-                    comando.CommandText = "SELECT SUM((preco * " + textBoxQUANTIDADE.Text + ")) FROM tbl_produtos WHERE tbl_produtos.id = '" + textBoxCODIGO.Text + "'";
+                    comando.CommandText = "SELECT SUM((preco * " + numericUpDown1.Text + ")) FROM tbl_produtos WHERE tbl_produtos.id = '" + textBoxCODIGO.Text + "'";
 
                     MySqlDataReader resultado = comando.ExecuteReader();
 
@@ -328,6 +349,7 @@ namespace Mercadinho
             id_vendas = null;
             if (DialogResult.Yes == MessageBox.Show("Deseja iniciar uma nova venda? Caso escolha NÃO o aplicativo irá retornar a tela de login!", "Nova Venda!", MessageBoxButtons.YesNo))
             {
+                DATAGRID_PESQUISA();
                 DATAGRID_CARRINHO();
                 DATAGRID_ITENS();
                 INICIARCOMPRA();
@@ -342,17 +364,30 @@ namespace Mercadinho
 
         }
 
-        private void textBoxQUANTIDADE_TextChanged(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if (textBoxCODIGO.Text.Length > 0 && textBoxQUANTIDADE.Text != "")
+            if (textBoxCODIGO.Text.Length > 0 && numericUpDown1.Text != "")
             {
                 DATAGRID_ITENS();
                 VALORUNI();
                 labelVALORUNI.Text = $"R$ " + valor_uni + "";
                 double valorUnitario = double.Parse(valor_uni);
-                int quantidade = int.Parse(textBoxQUANTIDADE.Text);
+                int quantidade = int.Parse(numericUpDown1.Text);
                 labelTOTALITEM.Text = $"R$ " + valorUnitario * quantidade + "";
             }
+        }
+
+        private void textBoxDESC_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxDESC.Text.Length > 0)
+            {
+                DATAGRID_PESQUISA();
+            }
+        }
+
+        private void dataGridViewPESQUISA_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBoxCODIGO.Text = dataGridViewPESQUISA.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }
