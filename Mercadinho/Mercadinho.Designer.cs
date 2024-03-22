@@ -30,9 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mercadinho));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridViewPESQUISA = new System.Windows.Forms.DataGridView();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBoxDESC = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewITENS = new System.Windows.Forms.DataGridView();
             this.buttonADICIONAR = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -52,17 +57,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBoxDESC = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridViewPESQUISA = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPESQUISA)).BeginInit();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewITENS)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -70,9 +73,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCARRINHO)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPESQUISA)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -103,6 +103,56 @@
             this.splitContainer1.Size = new System.Drawing.Size(797, 470);
             this.splitContainer1.SplitterDistance = 405;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // dataGridViewPESQUISA
+            // 
+            this.dataGridViewPESQUISA.AllowUserToAddRows = false;
+            this.dataGridViewPESQUISA.AllowUserToDeleteRows = false;
+            this.dataGridViewPESQUISA.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewPESQUISA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPESQUISA.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewPESQUISA.Location = new System.Drawing.Point(10, 61);
+            this.dataGridViewPESQUISA.Name = "dataGridViewPESQUISA";
+            this.dataGridViewPESQUISA.ReadOnly = true;
+            this.dataGridViewPESQUISA.Size = new System.Drawing.Size(390, 46);
+            this.dataGridViewPESQUISA.TabIndex = 6;
+            this.dataGridViewPESQUISA.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPESQUISA_CellMouseDoubleClick);
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.textBoxDESC);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(404, 55);
+            this.panel7.TabIndex = 4;
+            // 
+            // textBoxDESC
+            // 
+            this.textBoxDESC.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxDESC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDESC.Location = new System.Drawing.Point(3, 25);
+            this.textBoxDESC.Multiline = true;
+            this.textBoxDESC.Name = "textBoxDESC";
+            this.textBoxDESC.Size = new System.Drawing.Size(396, 22);
+            this.textBoxDESC.TabIndex = 3;
+            this.textBoxDESC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxDESC.TextChanged += new System.EventHandler(this.textBoxDESC_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(-2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(525, 22);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "PESQUISAR ITEM POR NOME                                                     ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridViewITENS
             // 
@@ -140,6 +190,25 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(212, 62);
             this.panel6.TabIndex = 4;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(3, 25);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(204, 31);
+            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numericUpDown1.Click += new System.EventHandler(this.numericUpDown1_Click);
+            this.numericUpDown1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown1_MouseClick);
             // 
             // label10
             // 
@@ -368,73 +437,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CAIXA ABERTO";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 25);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(204, 31);
-            this.numericUpDown1.TabIndex = 1;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.textBoxDESC);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(404, 55);
-            this.panel7.TabIndex = 4;
-            // 
-            // textBoxDESC
-            // 
-            this.textBoxDESC.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBoxDESC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDESC.Location = new System.Drawing.Point(3, 25);
-            this.textBoxDESC.Multiline = true;
-            this.textBoxDESC.Name = "textBoxDESC";
-            this.textBoxDESC.Size = new System.Drawing.Size(396, 22);
-            this.textBoxDESC.TabIndex = 3;
-            this.textBoxDESC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBoxDESC.TextChanged += new System.EventHandler(this.textBoxDESC_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(-2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(525, 22);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "PESQUISAR ITEM POR NOME                                                     ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridViewPESQUISA
-            // 
-            this.dataGridViewPESQUISA.AllowUserToAddRows = false;
-            this.dataGridViewPESQUISA.AllowUserToDeleteRows = false;
-            this.dataGridViewPESQUISA.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewPESQUISA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPESQUISA.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewPESQUISA.Location = new System.Drawing.Point(10, 61);
-            this.dataGridViewPESQUISA.Name = "dataGridViewPESQUISA";
-            this.dataGridViewPESQUISA.ReadOnly = true;
-            this.dataGridViewPESQUISA.Size = new System.Drawing.Size(390, 46);
-            this.dataGridViewPESQUISA.TabIndex = 6;
-            this.dataGridViewPESQUISA.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPESQUISA_CellMouseDoubleClick);
-            // 
             // Mercadinho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,9 +452,13 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPESQUISA)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewITENS)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -465,10 +471,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCARRINHO)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPESQUISA)).EndInit();
             this.ResumeLayout(false);
 
         }

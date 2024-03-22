@@ -372,8 +372,8 @@ namespace Mercadinho
                 VALORUNI();
                 labelVALORUNI.Text = $"R$ " + valor_uni + "";
                 double valorUnitario = double.Parse(valor_uni);
-                int quantidade = int.Parse(numericUpDown1.Text);
-                labelTOTALITEM.Text = $"R$ " + valorUnitario * quantidade + "";
+                int quantidade = int.Parse(numericUpDown1.Value.ToString());
+                labelTOTALITEM.Text = $"R$ " + (valorUnitario * quantidade) + "";
             }
         }
 
@@ -388,6 +388,16 @@ namespace Mercadinho
         private void dataGridViewPESQUISA_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBoxCODIGO.Text = dataGridViewPESQUISA.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void numericUpDown1_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void numericUpDown1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
