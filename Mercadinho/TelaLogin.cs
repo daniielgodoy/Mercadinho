@@ -18,12 +18,44 @@ namespace Mercadinho
         MySqlConnection conexao;
         MySqlCommand comando;
         string cargo;
+        
         public TelaLogin()
         {
             InitializeComponent();
             servidor = "Server=localhost;Database=bd_vendas;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
+            GERENTE();
+        }
+
+        private void GERENTE()
+        {
+            try
+            {
+
+                conexao.Open();
+                comando.CommandText = "SELECT cargo FROM tbl_funcionarios WHERE cargo = 'Gerente';";
+                MySqlDataReader resultado = comando.ExecuteReader();
+
+                if (resultado.Read())
+                {
+                    label2.Enabled = false;
+                    label2.Text = "";
+                }
+                else
+                {
+                    label2.Enabled = true;
+                }
+
+            }
+            catch (Exception erro_mysql)
+            {
+                MessageBox.Show(erro_mysql.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         private void buttonADICIONAR_Click(object sender, EventArgs e)
@@ -119,6 +151,41 @@ namespace Mercadinho
         {
             textBoxLOGIN.Clear();
             textBoxSENHA.Clear();
+
+        }
+
+        private void label2_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+
+                conexao.Open();
+                comando.CommandText = "INSERT INTO tbl_funcionarios(nome, cpf, senha, cargo) VALUES('Gerente','10020030040','0000','Gerente')";
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Gerente padrão cadastrado! Por favor cadastre um novo gerente assim que possível.");
+                MessageBox.Show("Login: 10020030040 \nSenha: 0000");
+                MessageBox.Show("Para sua segurança o Gerente padrão será deletado após a criação de um novo.");
+
+            }
+            catch (Exception erro_mysql)
+            {
+                MessageBox.Show(erro_mysql.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                
+            }
+            GERENTE();
+        }
+
+        private void textBoxSENHA_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonADICIONAR_KeyPress(object sender, KeyPressEventArgs e)
+        {
 
         }
     }

@@ -16,6 +16,7 @@ namespace Mercadinho
         string servidor;
         MySqlConnection conexao;
         MySqlCommand comando;
+        string id_gerente;
         public CadastroFunc()
         {
             InitializeComponent();
@@ -31,9 +32,77 @@ namespace Mercadinho
             comboBoxCARGO.Text = "Funcionário";
         }
 
+        private void DELETARGERENTE()
+        {
+            try
+            {
+
+                conexao.Open();
+                comando.CommandText = "SELECT * FROM tbl_funcionarios WHERE nome = 'Gerente' AND cpf = '10020030040' AND senha = '0000';\r\n";
+                MySqlDataReader resultado = comando.ExecuteReader();
+
+                if (resultado.Read())
+                {
+                    id_gerente = resultado.GetInt32(0).ToString();
+
+                }
+                
+
+            }
+            catch (Exception erro_mysql)
+            {
+                MessageBox.Show(erro_mysql.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            try
+            {
+
+                conexao.Open();
+                comando.CommandText = "SELECT * FROM tbl_funcionarios WHERE id != '"+id_gerente+"' AND cargo = 'Gerente';";
+                MySqlDataReader resultado = comando.ExecuteReader();
+
+                if (resultado.Read())
+                {
+                    conexao.Close();
+                    try
+                    {
+
+                        conexao.Open();
+                        comando.CommandText = "DELETE FROM tbl_funcionarios WHERE id = '" + id_gerente + "';";
+                        comando.ExecuteNonQuery();
+                        
+
+
+                    }
+                    catch (Exception erro_mysql)
+                    {
+                        MessageBox.Show(erro_mysql.Message);
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                    }
+                }
+
+
+            }
+            catch (Exception erro_mysql)
+            {
+                MessageBox.Show(erro_mysql.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+        }
+
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
-            if (textBoxNOME.Text != "" && textBoxCPF.Text != "" && textBoxSENHA.Text != "" && comboBoxCARGO.Text != "" && textBoxCPF.Text.Length != 11)
+            if (textBoxNOME.Text != "" && textBoxCPF.Text != "" && textBoxSENHA.Text != "" && comboBoxCARGO.Text != "" && textBoxCPF.Text.Length == 11)
             {
                 try
                 {
@@ -52,6 +121,7 @@ namespace Mercadinho
                 {
                     conexao.Close();
                     LIMPAR();
+                    DELETARGERENTE();
                 }
             }
             else

@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxLOGIN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonADICIONAR);
             this.panel1.Controls.Add(this.textBoxSENHA);
@@ -50,7 +52,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 138);
+            this.panel1.Size = new System.Drawing.Size(256, 155);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -80,6 +82,7 @@
             this.buttonADICIONAR.Text = "ENTRAR";
             this.buttonADICIONAR.UseVisualStyleBackColor = false;
             this.buttonADICIONAR.Click += new System.EventHandler(this.buttonADICIONAR_Click);
+            this.buttonADICIONAR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonADICIONAR_KeyPress);
             // 
             // textBoxSENHA
             // 
@@ -88,6 +91,7 @@
             this.textBoxSENHA.PasswordChar = '*';
             this.textBoxSENHA.Size = new System.Drawing.Size(248, 20);
             this.textBoxSENHA.TabIndex = 6;
+            this.textBoxSENHA.Enter += new System.EventHandler(this.textBoxSENHA_Enter);
             // 
             // label1
             // 
@@ -124,12 +128,25 @@
             this.label6.Text = "CPF                                                                ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(2, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(249, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Clique aqui para primeiro acesso (Cadastro gerente)";
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(279, 160);
+            this.ClientSize = new System.Drawing.Size(279, 176);
             this.Controls.Add(this.panel1);
             this.Name = "TelaLogin";
             this.Text = "TelaLogin";
@@ -149,5 +166,6 @@
         private System.Windows.Forms.TextBox textBoxLOGIN;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonADICIONAR;
+        private System.Windows.Forms.Label label2;
     }
 }
