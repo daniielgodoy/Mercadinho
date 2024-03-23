@@ -18,16 +18,6 @@ CREATE SCHEMA IF NOT EXISTS `bd_vendas` DEFAULT CHARACTER SET utf8 ;
 USE `bd_vendas` ;
 
 -- -----------------------------------------------------
--- Table `bd_vendas`.`tbl_clientes`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bd_vendas`.`tbl_clientes` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `bd_vendas`.`tbl_produtos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bd_vendas`.`tbl_produtos` (
@@ -42,7 +32,7 @@ ENGINE = InnoDB;
 -- Table `bd_vendas`.`tbl_funcionarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bd_vendas`.`tbl_funcionarios` (
-  `id` int(11) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `senha` varchar(45) NOT NULL,
@@ -57,17 +47,10 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `bd_vendas`.`tbl_vendas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data_compra` DATE NULL,
-  `fk_clientes` INT NULL,
   `fk_funcionarios` INT NULL,
   `valor_total` DOUBLE NULL,
   PRIMARY KEY (`id`),
-  INDEX `tbl_vendas_tbl_cliente_idx` (`fk_clientes` ASC),
   INDEX `tbl_vendas_tbl_funcionarios_idx` (`fk_funcionarios` ASC),
-  CONSTRAINT `tbl_vendas_tbl_clientes`
-    FOREIGN KEY (`fk_clientes`)
-    REFERENCES `bd_vendas`.`tbl_clientes` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `tbl_vendas_tbl_funcionarios`
     FOREIGN KEY (`fk_funcionarios`)
     REFERENCES `bd_vendas`.`tbl_funcionarios` (`id`)

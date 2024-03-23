@@ -160,7 +160,7 @@ namespace Mercadinho
             {
 
                 conexao.Open();
-                comando.CommandText = "INSERT INTO tbl_funcionarios(nome, cpf, senha, cargo) VALUES('Gerente','10020030040','0000','Gerente')";
+                comando.CommandText = "INSERT INTO tbl_funcionarios(nome, cpf, senha, cargo) VALUES('Gerente','10020030040','0000','Gerente');";
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Gerente padrão cadastrado! Por favor cadastre um novo gerente assim que possível.");
                 MessageBox.Show("Login: 10020030040 \nSenha: 0000");

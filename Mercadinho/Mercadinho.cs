@@ -114,7 +114,7 @@ namespace Mercadinho
             {
 
                 conexao.Open();
-                comando.CommandText = "INSERT INTO tbl_vendas(data_compra, fk_clientes, fk_funcionarios) VALUES (CURDATE(), '1','"+variavel.id_func+"');";
+                comando.CommandText = "INSERT INTO tbl_vendas(data_compra, fk_funcionarios) VALUES (CURDATE(),'"+variavel.id_func+"');";
                 comando.ExecuteNonQuery();
 
             }
@@ -313,6 +313,7 @@ namespace Mercadinho
                     conexao.Close();
                 }
                 LIMPAR();
+                DATAGRID_PESQUISA();
                 DATAGRID_CARRINHO();
                 VALORTOTAL();
                 labelSUBTOTAL.Text = $"R$ " + valor_total + "";
