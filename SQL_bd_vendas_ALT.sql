@@ -42,8 +42,11 @@ ENGINE = InnoDB;
 -- Table `bd_vendas`.`tbl_funcionarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bd_vendas`.`tbl_funcionarios` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
+  `id` int(11) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
+  `senha` varchar(45) NOT NULL,
+  `cargo` varchar(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
