@@ -65,7 +65,7 @@
             this.button1.Location = new System.Drawing.Point(27, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 23);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
