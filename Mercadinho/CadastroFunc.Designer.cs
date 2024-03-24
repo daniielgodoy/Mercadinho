@@ -69,7 +69,7 @@
             this.button1.Location = new System.Drawing.Point(27, 136);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 23);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -82,7 +82,7 @@
             this.buttonCADASTRAR.Location = new System.Drawing.Point(27, 107);
             this.buttonCADASTRAR.Name = "buttonCADASTRAR";
             this.buttonCADASTRAR.Size = new System.Drawing.Size(172, 23);
-            this.buttonCADASTRAR.TabIndex = 8;
+            this.buttonCADASTRAR.TabIndex = 5;
             this.buttonCADASTRAR.Text = "Cadastrar";
             this.buttonCADASTRAR.UseVisualStyleBackColor = false;
             this.buttonCADASTRAR.Click += new System.EventHandler(this.buttonCADASTRAR_Click);
@@ -96,7 +96,7 @@
             this.comboBoxCARGO.Location = new System.Drawing.Point(66, 80);
             this.comboBoxCARGO.Name = "comboBoxCARGO";
             this.comboBoxCARGO.Size = new System.Drawing.Size(133, 21);
-            this.comboBoxCARGO.TabIndex = 7;
+            this.comboBoxCARGO.TabIndex = 4;
             this.comboBoxCARGO.Text = "Funcionário";
             // 
             // textBoxSENHA
@@ -105,14 +105,14 @@
             this.textBoxSENHA.Name = "textBoxSENHA";
             this.textBoxSENHA.PasswordChar = '*';
             this.textBoxSENHA.Size = new System.Drawing.Size(133, 20);
-            this.textBoxSENHA.TabIndex = 6;
+            this.textBoxSENHA.TabIndex = 3;
             // 
             // textBoxCPF
             // 
             this.textBoxCPF.Location = new System.Drawing.Point(66, 35);
             this.textBoxCPF.Name = "textBoxCPF";
             this.textBoxCPF.Size = new System.Drawing.Size(133, 20);
-            this.textBoxCPF.TabIndex = 5;
+            this.textBoxCPF.TabIndex = 2;
             this.textBoxCPF.TextChanged += new System.EventHandler(this.textBoxCPF_TextChanged);
             // 
             // textBoxNOME
@@ -120,7 +120,8 @@
             this.textBoxNOME.Location = new System.Drawing.Point(66, 12);
             this.textBoxNOME.Name = "textBoxNOME";
             this.textBoxNOME.Size = new System.Drawing.Size(133, 20);
-            this.textBoxNOME.TabIndex = 4;
+            this.textBoxNOME.TabIndex = 1;
+            this.textBoxNOME.TextChanged += new System.EventHandler(this.textBoxNOME_TextChanged);
             // 
             // label4
             // 

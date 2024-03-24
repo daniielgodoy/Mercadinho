@@ -65,7 +65,7 @@
             this.button1.Location = new System.Drawing.Point(27, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 23);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -75,7 +75,7 @@
             this.textBoxCENTAVO.Location = new System.Drawing.Point(134, 34);
             this.textBoxCENTAVO.Name = "textBoxCENTAVO";
             this.textBoxCENTAVO.Size = new System.Drawing.Size(44, 20);
-            this.textBoxCENTAVO.TabIndex = 10;
+            this.textBoxCENTAVO.TabIndex = 3;
             this.textBoxCENTAVO.Text = "00";
             this.textBoxCENTAVO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -97,7 +97,7 @@
             this.buttonCADASTRAR.Location = new System.Drawing.Point(27, 60);
             this.buttonCADASTRAR.Name = "buttonCADASTRAR";
             this.buttonCADASTRAR.Size = new System.Drawing.Size(172, 23);
-            this.buttonCADASTRAR.TabIndex = 8;
+            this.buttonCADASTRAR.TabIndex = 4;
             this.buttonCADASTRAR.Text = "Cadastrar";
             this.buttonCADASTRAR.UseVisualStyleBackColor = false;
             this.buttonCADASTRAR.Click += new System.EventHandler(this.buttonCADASTRAR_Click);
@@ -107,7 +107,7 @@
             this.textBoxVALOR.Location = new System.Drawing.Point(78, 34);
             this.textBoxVALOR.Name = "textBoxVALOR";
             this.textBoxVALOR.Size = new System.Drawing.Size(44, 20);
-            this.textBoxVALOR.TabIndex = 5;
+            this.textBoxVALOR.TabIndex = 2;
             this.textBoxVALOR.Text = "0";
             this.textBoxVALOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -116,7 +116,7 @@
             this.textBoxDESCRICAO.Location = new System.Drawing.Point(88, 12);
             this.textBoxDESCRICAO.Name = "textBoxDESCRICAO";
             this.textBoxDESCRICAO.Size = new System.Drawing.Size(111, 20);
-            this.textBoxDESCRICAO.TabIndex = 4;
+            this.textBoxDESCRICAO.TabIndex = 1;
             // 
             // label2
             // 

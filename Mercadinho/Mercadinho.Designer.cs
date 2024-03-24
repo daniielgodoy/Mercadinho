@@ -136,7 +136,7 @@
             this.textBoxDESC.Multiline = true;
             this.textBoxDESC.Name = "textBoxDESC";
             this.textBoxDESC.Size = new System.Drawing.Size(396, 22);
-            this.textBoxDESC.TabIndex = 3;
+            this.textBoxDESC.TabIndex = 1;
             this.textBoxDESC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxDESC.TextChanged += new System.EventHandler(this.textBoxDESC_TextChanged);
             // 
@@ -176,7 +176,7 @@
             this.buttonADICIONAR.Location = new System.Drawing.Point(10, 418);
             this.buttonADICIONAR.Name = "buttonADICIONAR";
             this.buttonADICIONAR.Size = new System.Drawing.Size(390, 35);
-            this.buttonADICIONAR.TabIndex = 3;
+            this.buttonADICIONAR.TabIndex = 4;
             this.buttonADICIONAR.Text = "ADICIONAR ITEM";
             this.buttonADICIONAR.UseVisualStyleBackColor = false;
             this.buttonADICIONAR.Click += new System.EventHandler(this.buttonADICIONAR_Click);
@@ -199,7 +199,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(3, 25);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(204, 31);
-            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -322,7 +322,7 @@
             this.textBoxCODIGO.Multiline = true;
             this.textBoxCODIGO.Name = "textBoxCODIGO";
             this.textBoxCODIGO.Size = new System.Drawing.Size(204, 32);
-            this.textBoxCODIGO.TabIndex = 3;
+            this.textBoxCODIGO.TabIndex = 2;
             this.textBoxCODIGO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxCODIGO.TextChanged += new System.EventHandler(this.textBoxCODIGO_TextChanged);
             // 

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonADICIONAR = new System.Windows.Forms.Button();
             this.textBoxSENHA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxLOGIN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,19 @@
             this.panel1.Size = new System.Drawing.Size(256, 155);
             this.panel1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(2, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(249, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Clique aqui para primeiro acesso (Cadastro gerente)";
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MidnightBlue;
@@ -64,7 +77,7 @@
             this.button1.Location = new System.Drawing.Point(142, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 28);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 4;
             this.button1.Text = "LIMPAR";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -78,7 +91,7 @@
             this.buttonADICIONAR.Location = new System.Drawing.Point(3, 99);
             this.buttonADICIONAR.Name = "buttonADICIONAR";
             this.buttonADICIONAR.Size = new System.Drawing.Size(109, 28);
-            this.buttonADICIONAR.TabIndex = 7;
+            this.buttonADICIONAR.TabIndex = 3;
             this.buttonADICIONAR.Text = "ENTRAR";
             this.buttonADICIONAR.UseVisualStyleBackColor = false;
             this.buttonADICIONAR.Click += new System.EventHandler(this.buttonADICIONAR_Click);
@@ -90,7 +103,7 @@
             this.textBoxSENHA.Name = "textBoxSENHA";
             this.textBoxSENHA.PasswordChar = '*';
             this.textBoxSENHA.Size = new System.Drawing.Size(248, 20);
-            this.textBoxSENHA.TabIndex = 6;
+            this.textBoxSENHA.TabIndex = 2;
             this.textBoxSENHA.Enter += new System.EventHandler(this.textBoxSENHA_Enter);
             // 
             // label1
@@ -112,7 +125,7 @@
             this.textBoxLOGIN.Location = new System.Drawing.Point(3, 25);
             this.textBoxLOGIN.Name = "textBoxLOGIN";
             this.textBoxLOGIN.Size = new System.Drawing.Size(248, 20);
-            this.textBoxLOGIN.TabIndex = 4;
+            this.textBoxLOGIN.TabIndex = 1;
             // 
             // label6
             // 
@@ -127,19 +140,6 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "CPF                                                                ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(2, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Clique aqui para primeiro acesso (Cadastro gerente)";
-            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
             // 
             // TelaLogin
             // 

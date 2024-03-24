@@ -142,5 +142,10 @@ namespace Mercadinho
         {
 
         }
+
+        private void textBoxNOME_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
